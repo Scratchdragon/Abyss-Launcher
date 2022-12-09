@@ -53,8 +53,10 @@ body {
 	top: 5vh;
 	height: 95vh;
 	width: 100%;
-	overflow-y: auto;
+	overflow-y: scroll;
 	padding: 0;
+	overflow: -moz-scrollbars-none;
+    scrollbar-width: none;
 }
 
 #apps {
@@ -251,4 +253,8 @@ label {
 	background-color: rgba(12, 19, 27, 0.5);
 
 	box-shadow: 0 1vh 1vh rgba(0,0,0, 0.25);
+}
+
+::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
 }
