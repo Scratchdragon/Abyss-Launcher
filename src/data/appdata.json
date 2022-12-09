@@ -1,0 +1,12 @@
+{
+	"Muck" : {
+		"image" : "images/muck.jpg",
+		"description" : "Multiplayer rougelike",
+		"launch" : "steam steam://rungameid/1625450"
+	},
+	"Placeholder" : {
+		"image" : "images/app-image.jpg",
+		"description" : "App description",
+		"launch" : "placeholder"
+	}
+}

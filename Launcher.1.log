@@ -1,0 +1,351 @@
+Abyss Launcher Log (23:18:02)
+	[-] Info
+	[*] Note
+	[!] Warning
+	[E] Error
+[*] Loading desktop entries
+	Indexing directory '/usr/share/applications'
+		Loaded 'avahi-discover.desktop' (Avahi Zeroconf Browser)
+		Loaded 'bssh.desktop' (Avahi SSH Server Browser)
+		Loaded 'bvnc.desktop' (Avahi VNC Server Browser)
+		Loaded 'htop.desktop' (Htop)
+		Loaded 'micro.desktop' (Micro)
+		Loaded 'fish.desktop' (fish)
+		Loaded 'garuda-system-maintenance-settings.desktop' (Garuda System Maintenance Settings)
+		Loaded 'lstopo.desktop' (Hardware Locality lstopo)
+		Loaded 'org.kde.ksysguard.desktop' (KSysGuard)
+		Loaded 'org.kde.kuserfeedback-console.desktop' (UserFeedback Console)
+		Loaded 'qv4l2.desktop' (Qt V4L2 test Utility)
+		Loaded 'qvidcap.desktop' (Qt V4L2 video capture utility)
+		Loaded 'signon-ui.desktop' (Account authentication)
+		Loaded 'stoken-gui-small.desktop' (Software Token (small))
+		Loaded 'stoken-gui.desktop' (Software Token)
+		Loaded 'cups.desktop' (Manage Printing)
+		Loaded 'steam.desktop' (Friends)
+		Loaded 'winetricks.desktop' (Winetricks)
+		Loaded 'garuda-welcome.desktop' (Garuda Welcome)
+		Loaded 'gtk-lshw.desktop' (LSHW)
+		Loaded 'SysMonTask.desktop' (SysMonTask)
+		Loaded 'virt-manager.desktop' (Virtual Machine Manager)
+		Loaded 'gparted.desktop' (GParted)
+		Loaded 'org.gnome.Glade.desktop' (Glade)
+		Loaded 'garuda-boot-options.desktop' (Garuda Boot Options)
+		Loaded 'garuda-network-assistant.desktop' (Garuda Network Assistant)
+		Loaded 'guitarix.desktop' (guitarix)
+		Loaded 'jetbrains-clion.desktop' (CLion)
+		Loaded 'garuda-assistant.desktop' (Garuda Assistant)
+		Loaded 'quakespasm.desktop' (Quake)
+		Loaded 'gimp.desktop' (GNU Image Manipulation Program)
+		Loaded 'idea.desktop' (IntelliJ IDEA Community Edition)
+		Loaded 'reboot-to-uefi.desktop' (Reboot To UEFI)
+		Loaded 'suspend-then-hibernate.desktop' (Suspend/Hibernate)
+		Loaded 'java-java11-openjdk.desktop' (OpenJDK Java 11 Runtime)
+		Loaded 'jconsole-java11-openjdk.desktop' (OpenJDK Java 11 Console)
+		Loaded 'jshell-java11-openjdk.desktop' (OpenJDK Java 11 Shell)
+		Loaded 'java-java17-openjdk.desktop' (OpenJDK Java 17 Runtime)
+		Loaded 'jconsole-java17-openjdk.desktop' (OpenJDK Java 17 Console)
+		Loaded 'jshell-java17-openjdk.desktop' (OpenJDK Java 17 Shell)
+		Loaded 'org.kde.latte-dock.desktop' (Latte Dock)
+		Loaded 'qemu.desktop' (QEMU)
+		Loaded 'org.qt-project.qtcreator.desktop' (Qt Creator)
+		Loaded 'storage-manager.desktop' (Storage Manager)
+		Loaded 'arduino-ide-v2.desktop' (Arduino IDE v2)
+		Loaded 'Alacritty.desktop' (New Terminal)
+		Loaded 'google-maps-geo-handler.desktop' (Google Maps)
+		Loaded 'openstreetmap-geo-handler.desktop' (OpenStreetMap)
+		Loaded 'qwant-maps-geo-handler.desktop' (Qwant Maps)
+		Loaded 'wheelmap-geo-handler.desktop' (wheelmap.org)
+		Loaded 'org.kde.kwalletd5.desktop' (KDE Wallet Service)
+		Loaded 'org.kde.kded5.desktop' (KDED)
+		Loaded 'kcm_trash.desktop' (Trash)
+		Loaded 'ktelnetservice5.desktop' (KTelnetService)
+		Loaded 'org.kde.ark.desktop' (Ark)
+		Loaded 'org.gnome.baobab.desktop' (Disk Usage Analyzer)
+		Loaded 'kcm_bluetooth.desktop' (Bluetooth)
+		Loaded 'org.kde.bluedevilsendfile.desktop' (Bluetooth File Transfer)
+		Loaded 'org.kde.bluedevilwizard.desktop' (Add Bluetooth Device)
+		Loaded 'btrfs-assistant.desktop' (Btrfs Assistant)
+		Loaded 'discord.desktop' (Discord)
+		Loaded 'org.kde.dolphin.desktop' (Dolphin)
+		Loaded 'geoclue-demo-agent.desktop' (Geoclue Demo agent)
+		Loaded 'geoclue-where-am-i.desktop' (Where am I?)
+		Loaded 'org.freedesktop.impl.portal.desktop.kde.desktop' (Portal)
+		Loaded 'firedragon.desktop' (New Private Window)
+		Loaded 'kcm_filetypes.desktop' (File Associations)
+		Loaded 'org.kde.keditfiletype.desktop' (File Type Editor)
+		Loaded 'org.kde.plasma.settings.open.desktop' (Open System Settings)
+		Loaded 'kcm_screenlocker.desktop' (Screen Locking)
+		Loaded 'kcm_kwin_effects.desktop' (Desktop Effects)
+		Loaded 'kcm_kwin_scripts.desktop' (KWin Scripts)
+		Loaded 'kcm_kwin_virtualdesktops.desktop' (Virtual Desktops)
+		Loaded 'kcm_kwindecoration.desktop' (Window Decorations)
+		Loaded 'kcm_kwinoptions.desktop' (Window Behavior)
+		Loaded 'kcm_kwinrules.desktop' (Window Rules)
+		Loaded 'kcm_kwintabbox.desktop' (Task Switcher)
+		Loaded 'kcm_virtualkeyboard.desktop' (Virtual Keyboard)
+		Loaded 'kwincompositing.desktop' (Compositor)
+		Loaded 'org.kde.kwin_rules_dialog.desktop' (Window Rules)
+		Loaded 'assistant.desktop' (Qt Assistant)
+		Loaded 'designer.desktop' (Qt Designer)
+		Loaded 'linguist.desktop' (Qt Linguist)
+		Loaded 'qdbusviewer.desktop' (Qt QDBusViewer )
+		Loaded 'kcm_autostart.desktop' (Autostart)
+		Loaded 'kcm_colors.desktop' (Colors)
+		Loaded 'kcm_cursortheme.desktop' (Cursors)
+		Loaded 'kcm_feedback.desktop' (User Feedback)
+		Loaded 'kcm_fontinst.desktop' (Font Management)
+		Loaded 'kcm_fonts.desktop' (Fonts)
+		Loaded 'kcm_icons.desktop' (Icons)
+		Loaded 'kcm_lookandfeel.desktop' (Global Theme)
+		Loaded 'kcm_nightcolor.desktop' (Night Color)
+		Loaded 'kcm_notifications.desktop' (Notifications)
+		Loaded 'kcm_regionandlang.desktop' (Region & Language)
+		Loaded 'kcm_style.desktop' (Application Style)
+		Loaded 'kcm_users.desktop' (Users)
+		Loaded 'org.kde.kcolorschemeeditor.desktop' (KColorSchemeEditor)
+		Loaded 'org.kde.kfontview.desktop' (KFontView)
+		Loaded 'org.kde.klipper.desktop' (Klipper)
+		Loaded 'org.kde.plasmashell.desktop' (Plasma Desktop Workspace)
+		Loaded 'org.kde.plasmawindowed.desktop' (Plasma Windowed)
+		Loaded 'org.kde.systemmonitor.desktop' (System Activity)
+		Loaded 'org.kde.plasma.browser_integration.host.desktop' (Plasma Browser Integration Host)
+		Loaded 'kvantummanager.desktop' (Kvantum Manager)
+		Loaded 'garuda-gamer.desktop' (Garuda Gamer)
+		Loaded 'garuda-settings-manager.desktop' (Garuda Settings Manager)
+		Loaded 'setup-assistant.desktop' (Setup Asssistant)
+		Loaded 'gcr-prompter.desktop' (Access Prompt)
+		Loaded 'gcr-viewer.desktop' (View file)
+		Loaded 'org.gnome.Firmware.desktop' (Firmware)
+		Loaded 'gnome-software-local-file-flatpak.desktop' (Software Install)
+		Loaded 'gnome-software-local-file-fwupd.desktop' (Software Install)
+		Loaded 'gnome-software-local-file-packagekit.desktop' (Software Install)
+		Loaded 'org.gnome.Software.desktop' (Software)
+		Loaded 'jamesdsp.desktop' (JamesDSP)
+		Loaded 'org.kde.kate.desktop' (Kate)
+		Loaded 'org.kde.kwrite.desktop' (KWrite)
+		Loaded 'org.kde.kdeconnect-settings.desktop' (KDE Connect Settings)
+		Loaded 'org.kde.kdeconnect.app.desktop' (KDE Connect)
+		Loaded 'org.kde.kdeconnect.daemon.desktop' (KDE Connect)
+		Loaded 'org.kde.kdeconnect.handler.desktop' (KDE Connect URL Handler)
+		Loaded 'org.kde.kdeconnect.nonplasma.desktop' (KDE Connect Indicator)
+		Loaded 'org.kde.kdeconnect.sms.desktop' (KDE Connect SMS)
+		Loaded 'org.kde.kdeconnect_open.desktop' (Open on connected device via KDE Connect)
+		Loaded 'kdesystemsettings.desktop' (KDE System Settings)
+		Loaded 'systemsettings.desktop' (Display Configuration)
+		Loaded 'kcm_about-distro.desktop' (About this System)
+		Loaded 'org.kde.kinfocenter.desktop' (Info Center)
+		Loaded 'org.kde.kmenuedit.desktop' (Menu Editor)
+		Loaded 'org.kde.konsole.desktop' (Open a New Tab)
+		Loaded 'kcm_kscreen.desktop' (Display Configuration)
+		Loaded 'dev.lapce.lapce.desktop' (Lapce)
+		Loaded 'libinput-gestures.desktop' (Libinput Gestures)
+		Loaded 'libinput-gestures-qt.desktop' (libinput-gestures-qt)
+		Loaded 'wihotspot.desktop' (Wifi Hotspot)
+		Loaded 'net.lutris.Lutris.desktop' (Lutris)
+		Loaded 'minecraft-launcher.desktop' (Minecraft Launcher)
+		Loaded 'mpv.desktop' (mpv Media Player)
+		Loaded 'octopi-cachecleaner.desktop' (Octopi CacheCleaner)
+		Loaded 'octopi.desktop' (Octopi)
+		Loaded 'okularApplication_chm.desktop' (Okular)
+		Loaded 'okularApplication_comicbook.desktop' (Okular)
+		Loaded 'okularApplication_djvu.desktop' (Okular)
+		Loaded 'okularApplication_dvi.desktop' (Okular)
+		Loaded 'okularApplication_epub.desktop' (Okular)
+		Loaded 'okularApplication_fax.desktop' (Okular)
+		Loaded 'okularApplication_fb.desktop' (Okular)
+		Loaded 'okularApplication_ghostview.desktop' (Okular)
+		Loaded 'okularApplication_kimgio.desktop' (Okular)
+		Loaded 'okularApplication_md.desktop' (Okular)
+		Loaded 'okularApplication_mobi.desktop' (Okular)
+		Loaded 'okularApplication_pdf.desktop' (Okular)
+		Loaded 'okularApplication_plucker.desktop' (Okular)
+		Loaded 'okularApplication_tiff.desktop' (Okular)
+		Loaded 'okularApplication_txt.desktop' (Okular)
+		Loaded 'okularApplication_xps.desktop' (Okular)
+		Loaded 'org.kde.mobile.okular_chm.desktop' (Reader)
+		Loaded 'org.kde.mobile.okular_comicbook.desktop' (Reader)
+		Loaded 'org.kde.mobile.okular_djvu.desktop' (Reader)
+		Loaded 'org.kde.mobile.okular_dvi.desktop' (Reader)
+		Loaded 'org.kde.mobile.okular_epub.desktop' (Reader)
+		Loaded 'org.kde.mobile.okular_fax.desktop' (Reader)
+		Loaded 'org.kde.mobile.okular_fb.desktop' (Reader)
+		Loaded 'org.kde.mobile.okular_ghostview.desktop' (Reader)
+		Loaded 'org.kde.mobile.okular_kimgio.desktop' (Reader)
+		Loaded 'org.kde.mobile.okular_md.desktop' (Reader)
+		Loaded 'org.kde.mobile.okular_mobi.desktop' (Reader)
+		Loaded 'org.kde.mobile.okular_pdf.desktop' (Reader)
+		Loaded 'org.kde.mobile.okular_plucker.desktop' (Reader)
+		Loaded 'org.kde.mobile.okular_tiff.desktop' (Reader)
+		Loaded 'org.kde.mobile.okular_txt.desktop' (Reader)
+		Loaded 'org.kde.mobile.okular_xps.desktop' (Reader)
+		Loaded 'org.kde.okular.desktop' (Okular)
+		Loaded 'opera.desktop' (New Private Window)
+		Loaded 'ar.com.softwareperonista.Pace.desktop' (Pace)
+		Loaded 'org.kde.partitionmanager.desktop' (KDE Partition Manager)
+		Loaded 'org.kde.polkit-kde-authentication-agent-1.desktop' (PolicyKit Authentication Agent)
+		Loaded 'kcm_access.desktop' (Accessibility)
+		Loaded 'kcm_activities.desktop' (Activities)
+		Loaded 'kcm_baloofile.desktop' (File Search)
+		Loaded 'kcm_clock.desktop' (Date & Time)
+		Loaded 'kcm_componentchooser.desktop' (Default Applications)
+		Loaded 'kcm_desktoppaths.desktop' (Locations)
+		Loaded 'kcm_joystick.desktop' (Game Controller)
+		Loaded 'kcm_kded.desktop' (Background Services)
+		Loaded 'kcm_keyboard.desktop' (Keyboard)
+		Loaded 'kcm_keys.desktop' (Shortcuts)
+		Loaded 'kcm_krunnersettings.desktop' (KRunner Settings)
+		Loaded 'kcm_landingpage.desktop' (Quick Settings)
+		Loaded 'kcm_launchfeedback.desktop' (Launch Feedback)
+		Loaded 'kcm_mouse.desktop' (Mouse)
+		Loaded 'kcm_plasmasearch.desktop' (Plasma Search)
+		Loaded 'kcm_qtquicksettings.desktop' (Plasma Renderer)
+		Loaded 'kcm_recentFiles.desktop' (Recent Files)
+		Loaded 'kcm_smserver.desktop' (Desktop Session)
+		Loaded 'kcm_solid_actions.desktop' (Device Actions)
+		Loaded 'kcm_splashscreen.desktop' (Splash Screen)
+		Loaded 'kcm_tablet.desktop' (Drawing Tablet)
+		Loaded 'kcm_touchpad.desktop' (Touchpad)
+		Loaded 'kcm_workspace.desktop' (General Behavior)
+		Loaded 'kcmspellchecking.desktop' (Spell Check)
+		Loaded 'org.kde.knetattach.desktop' (KNetAttach)
+		Loaded 'org.kde.plasma.emojier.desktop' (Emoji Selector)
+		Loaded 'kcm_firewall.desktop' (Firewall)
+		Loaded 'kcm_networkmanagement.desktop' (Connections)
+		Loaded 'kcm_pulseaudio.desktop' (Audio)
+		Loaded 'org.kde.plasma-systemmonitor.desktop' (System Monitor)
+		Loaded 'kcm_bolt.desktop' (Thunderbolt)
+		Loaded 'kcm_powerdevilactivitiesconfig.desktop' (Activity Power Settings)
+		Loaded 'kcm_powerdevilglobalconfig.desktop' (Advanced Power Settings)
+		Loaded 'kcm_powerdevilprofilesconfig.desktop' (Energy Saving)
+		Loaded 'steam-native.desktop' (Friends)
+		Loaded 'wine.desktop' (Wine Windows Program Loader)
+		Loaded 'protontricks-launch.desktop' (Protontricks Launcher)
+		Loaded 'protontricks.desktop' (Protontricks)
+		Loaded 'protonvpn.desktop' (Proton VPN)
+		Loaded 'reflector-simple.desktop' (Reflector Simple)
+		Loaded 'rider.desktop' (Rider)
+		Loaded 'rpi-imager.desktop' (Imager)
+		Loaded 'kcm_sddm.desktop' (Login Screen (SDDM))
+		Loaded 'snapper-tools.desktop' (Snapper Tools)
+		Loaded 'org.kde.spectacle.desktop' (Launch without taking a screenshot)
+		Loaded 'vim.desktop' (Vim)
+		Loaded 'visual-studio-code-url-handler.desktop' (Visual Studio Code - URL Handler)
+		Loaded 'visual-studio-code.desktop' (New Empty Window)
+		Loaded 'wine-browsedrive.desktop' (Browse C: Drive)
+		Loaded 'wine-notepad.desktop' (Notepad)
+		Loaded 'wine-uninstaller.desktop' (Uninstall Wine Software)
+		Loaded 'wine-winecfg.desktop' (Configure Wine)
+		Loaded 'arduino.desktop' (Arduino IDE)
+		Loaded 'cmake-gui.desktop' (CMake)
+		Loaded 'onedriver.desktop' (Onedriver)
+		Loaded 'pycharm.desktop' (PyCharm Community Edition)
+		Loaded 'yad-icon-browser.desktop' (Icon Browser)
+		Loaded 'yad-settings.desktop' (YAD settings)
+		Skipped 'mimeinfo.cache' (Not .desktop)
+	Indexing directory '/usr/local/share/applications/'
+		Loaded 'libinput-gestures-qt.desktop' (libinput-gestures-qt)
+		Skipped 'mimeinfo.cache' (Not .desktop)
+	Indexing directory '/home/declan/.local/share/applications/'
+		Loaded 'libinput-gestures-qt.desktop' (Libinput Gestures)
+		Loaded 'lstopo.desktop' (Hardware Locality (lstopo))
+		Loaded 'micro.desktop' (Micro)
+		Loaded 'qwikaccess.desktop' (Qwikaccess)
+		Loaded 'xgps.desktop' (Xgps)
+		Loaded 'xgpsspeed.desktop' (Speedometer (xgpsspeed))
+		Loaded 'yad-icon-browser.desktop' (Icon Browser)
+		Loaded 'yad-settings.desktop' (YAD settings)
+		Loaded 'discord-bot-client.desktop' (Discord Bot Client)
+		Skipped 'wine' (Not .desktop)
+		Loaded 'wine-extension-chm.desktop' (hh)
+		Loaded 'wine-extension-gif.desktop' (Wine Internet Explorer)
+		Loaded 'wine-extension-hlp.desktop' (winhlp32)
+		Loaded 'wine-extension-htm.desktop' (winebrowser)
+		Loaded 'wine-extension-ini.desktop' (notepad)
+		Loaded 'wine-extension-jfif.desktop' (Wine Internet Explorer)
+		Loaded 'wine-extension-jpe.desktop' (Wine Internet Explorer)
+		Loaded 'wine-extension-msp.desktop' (Wine Installer)
+		Loaded 'wine-extension-pdf.desktop' (winebrowser)
+		Loaded 'wine-extension-png.desktop' (Wine Internet Explorer)
+		Loaded 'wine-extension-rtf.desktop' (wordpad)
+		Loaded 'wine-extension-txt.desktop' (notepad)
+		Loaded 'wine-extension-url.desktop' (rundll32)
+		Loaded 'wine-extension-vbs.desktop' (wscript)
+		Loaded 'wine-extension-wri.desktop' (wordpad)
+		Loaded 'wine-extension-xml.desktop' (winebrowser)
+		Loaded 'Trailmakers.desktop' (Trailmakers)
+		Loaded 'quake.desktop' (Quake)
+		Loaded 'quakespasm.desktop' (Quake)
+		Loaded 'wine-extension-py.desktop' (Python)
+		Loaded 'wine-extension-pyc.desktop' (Python)
+		Loaded 'wine-extension-pyw.desktop' (Python)
+		Loaded 'wine-extension-pyz.desktop' (Python)
+		Loaded 'wine-extension-pyzw.desktop' (Python)
+		Loaded 'wine-extension-g1k.desktop' (Program Files)
+		Loaded 'Muck.desktop' (Muck)
+		Loaded 'userapp-Telegram Desktop-PNZ8V1.desktop' (Telegram Desktop)
+		Loaded 'org.telegram.desktop.5e3509bb10f05d0a9f5c15341e8430b4.desktop' (Quit Telegram)
+		Skipped 'mimeinfo.cache' (Not .desktop)
+[*] Finished loading desktop entries
+[*] Expanding Icon paths
+[*] Loading 'file:////home/declan/Projects/Abyss-Launcher/src/launcher.html'
+[-] Getting screen size
+[-] > xdpyinfo  | grep -oP 'dimensions:\s+\K\S+'
+[*] Size: 1920x1080
+[-] Starting launcher
+	Expanded 'Avahi Zeroconf Browser'
+	Expanded 'Avahi SSH Server Browser'
+	Expanded 'Avahi VNC Server Browser'
+	Expanded 'Htop'
+	Expanded 'Micro'
+	Expanded 'fish'
+	Expanded 'Garuda System Maintenance Settings'
+	Expanded 'Hardware Locality lstopo'
+	Expanded 'KSysGuard'
+	Expanded 'UserFeedback Console'
+	Expanded 'Qt V4L2 test Utility'
+	Expanded 'Qt V4L2 video capture utility'
+	Expanded 'Account authentication'
+	Expanded 'Software Token (small)'
+	Expanded 'Software Token'
+	Expanded 'Manage Printing'
+	Expanded 'Friends'
+	Expanded 'Winetricks'
+	Expanded 'Garuda Welcome'
+	Expanded 'LSHW'
+	Expanded 'SysMonTask'
+	Expanded 'Virtual Machine Manager'
+	Expanded 'GParted'
+	Expanded 'Glade'
+	Expanded 'Garuda Boot Options'
+	Expanded 'Garuda Network Assistant'
+	Expanded 'guitarix'
+	Expanded 'CLion'
+	Expanded 'Garuda Assistant'
+	Expanded 'Quake'
+	Expanded 'GNU Image Manipulation Program'
+	Expanded 'IntelliJ IDEA Community Edition'
+	Expanded 'Reboot To UEFI'
+	Expanded 'Suspend/Hibernate'
+	Expanded 'OpenJDK Java 11 Runtime'
+	Expanded 'OpenJDK Java 11 Console'
+	Expanded 'OpenJDK Java 11 Shell'
+	Expanded 'OpenJDK Java 17 Runtime'
+	Expanded 'OpenJDK Java 17 Console'
+	Expanded 'OpenJDK Java 17 Shell'
+	Expanded 'Latte Dock'
+	Expanded 'QEMU'
+	Expanded 'Qt Creator'
+	Expanded 'Storage Manager'
+	Expanded 'Arduino IDE v2'
+	Expanded 'New Terminal'
+	Expanded 'Google Maps'
+	Expanded 'OpenStreetMap'
+	Expanded 'Qwant Maps'
+	Expanded 'wheelmap.org'
+	Expanded 'KDE Wallet Service'
+	Expanded 'KDED'
+	Expanded 'Trash'
+	Expanded 'KTelnetService'
+	Expanded 'Ark'
+	Expanded 'Disk Usage Analyzer'
+Log closed at (23:18:09)

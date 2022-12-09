@@ -1,0 +1,16 @@
+[
+	{
+		"name":"data/widgets/board/app-list.json",
+		"settings":{
+			"title" : "Games",
+			"category" : "Game"
+		}
+	},
+	{
+		"name":"data/widgets/board/app-list.json",
+		"settings": {
+			"title" : "System",
+			"category" : "System"
+		}
+	}
+]
