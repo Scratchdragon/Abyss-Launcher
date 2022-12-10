@@ -87,7 +87,7 @@ def init_overlay(win_w, win_h, shutdown_func, restart_func, exit_func):
         buttons[i].pack(0, (i*2)+1, i)
 
     win.root.configure(bg="black")
-    win.root.after(10, update)
+    win.root.after(30, update)
 
     win.root.mainloop()
 
@@ -116,8 +116,8 @@ def hide():
 
 
 def animate():
-    win.size = ((w + (win.size[0] * 4)) / 3, height)
-    win.alpha = (alpha + (win.alpha * 4)) / 3
+    win.size = ((w + (win.size[0] * 3)) / 4, height)
+    win.alpha = (alpha + (win.alpha * 3)) / 4
 
 
 def update():
@@ -125,14 +125,15 @@ def update():
         win.destroy()
         return
 
-    x, y = win.root.winfo_pointerxy()
-    if x < w or manual_show.value == 1:
-        if not visible:
+    global visible
+    if manual_show.value == 1:
+        manual_show.value = 0
+        print(visible)
+        visible = not visible
+        if visible:
             show()
-        if manual_show.value == 1 and x < w:
-            manual_show.value = 0
-    elif visible:
-        hide()
+        else:
+            hide()
 
     if visible:
         global selected
@@ -146,7 +147,7 @@ def update():
             buttons[selected].run()
 
     animate()
-    win.root.after(10, update)
+    win.root.after(30, update)
 
 
 overlay_process = multiprocessing.Process()

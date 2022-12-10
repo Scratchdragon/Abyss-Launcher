@@ -1,4 +1,4 @@
-Abyss Launcher Log (18:27:43)
+Abyss Launcher Log (19:51:51)
 	[-] Info
 	[*] Note
 	[!] Warning
@@ -310,10 +310,7 @@ Abyss Launcher Log (18:27:43)
 [*] File request succeeded
 [-] getFile request for 'src/data/widgets/panel/wifi.json'
 [*] File request succeeded
-[-] > placeholder
-[-] Starting application 'Placeholder'
-[E] [Errno 2] No such file or directory: 'placeholder'
 [E] name 'asset_thread' is not defined
 [-] Closing listener
 [-] Closing overlay
-Log closed at (18:28:18)
+Log closed at (19:52:20)
