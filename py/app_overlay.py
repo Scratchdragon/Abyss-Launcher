@@ -26,6 +26,7 @@ def select_button(i):
 
 class Button:
     index = 0
+
     def button_hover(self, event):
         select_button(self.index)
 
@@ -84,7 +85,7 @@ def init_overlay(win_w, win_h, shutdown_func, restart_func, exit_func):
     exit_label.grid(sticky=tk.N, column=0, row=6, padx=(int(height / 64), 0), pady=(int(height / 64), 0))
 
     for i in range(0, len(buttons)):
-        buttons[i].pack(0, (i*2)+1, i)
+        buttons[i].pack(0, (i * 2) + 1, i)
 
     win.root.configure(bg="black")
     win.root.after(30, update)
@@ -137,10 +138,10 @@ def update():
     if visible:
         global selected
         if event.value == 1 and selected > 0:
-            select_button(selected-1)
+            select_button(selected - 1)
             event.value = 0
-        if event.value == 2 and selected < len(buttons)-1:
-            select_button(selected+1)
+        if event.value == 2 and selected < len(buttons) - 1:
+            select_button(selected + 1)
             event.value = 0
         if event.value == 5:
             buttons[selected].run()

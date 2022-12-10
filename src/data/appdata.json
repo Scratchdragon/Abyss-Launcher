@@ -1,12 +1,17 @@
 {
-	"Muck" : {
-		"image" : "images/muck.jpg",
-		"description" : "Multiplayer rougelike",
-		"launch" : "steam steam://rungameid/1625450"
+	"Pixel Dungeon" : {
+		"image" : "images/pixel-dungeon.png",
+		"description" : "Shattered Pixel Dungeon",
+		"launch" : "flatpak run com.shatteredpixel.shatteredpixeldungeon"
 	},
-	"Placeholder" : {
-		"image" : "images/app-image.jpg",
-		"description" : "App description",
-		"launch" : "placeholder"
+	"Quake" : {
+		"image" : "images/Quake1cover.jpg",
+		"description" : "quakespasm engine",
+		"launch" : "quakespasm -basedir /usr/local/games"
+	},
+	"Mindustry" : {
+		"image": "images/mindustry.jpg",
+		"description" : "factory game",
+		"launch" : "flatpak run com.github.Anuken.Mindustry"
 	}
 }

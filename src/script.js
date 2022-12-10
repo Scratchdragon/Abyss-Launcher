@@ -8,7 +8,7 @@ new QWebChannel(qt.webChannelTransport, function (channel) {
 		    if(icons_ready) {
                 document.body.style.top = "0";
                 loadElements();
-                poll_loop();
+                backend.onLoad();
             }
 	        else {
 	            const timeout = setTimeout(function() {
@@ -19,13 +19,6 @@ new QWebChannel(qt.webChannelTransport, function (channel) {
     }
     await_app_exit();
 });
-
-function poll_loop() {
-    backend.pollRequests();
-    const timeout = setTimeout(function() {
-        poll_loop();
-    }, 1000);
-}
 
 
 // Functions for fake popups:
@@ -345,7 +338,9 @@ function open_app() {
                 }
 		    });
         }
-        await_app_exit();
+        const timeout = setTimeout(function() {
+            await_app_exit();
+        }, 1000);
 	}
 }
 

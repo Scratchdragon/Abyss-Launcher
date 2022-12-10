@@ -15,25 +15,25 @@ from py.shortcuts import *
 from py.app_overlay import *
 
 
-def debug():
-    print("debug")
+def system(cmd):
+    logger.log("> " + cmd)
+    return os.popen(cmd).readlines()
 
 
 app_process = subprocess.Popen("uname -a".split(" "))
-app_stop = Value("i", 0)
+xid = ""  # The id of the launcher from xprop
+force_out_app = Value("i", 0)
 
 
-def queue_app_stop():
-    app_stop.value = 1
-
-
-def stop_current_app():
-    kill_app(app_process)
-
-
-def kill_app(process):
-    logger.log("Killing app process " + str(process.pid))
-    process.kill()
+def kill_app():
+    logger.log("Killing active app process")
+    kill_id = system("xprop -root _NET_ACTIVE_WINDOW | cut -d\\# -f2")[0]
+    if not kill_id == xid:
+        system("xkill -id " + kill_id)
+    else:
+        logger.log("Kill id equals launcher id, cannot kill")
+        global force_out_app
+        force_out_app.value = 1
 
 
 def show_overlay():
@@ -58,7 +58,7 @@ def send_overlay_keyevent(key):
 
 
 # Register all keyboard shortcuts
-register_shortcut("Key.f4", stop_current_app)
+register_shortcut("Key.f4", kill_app)
 register_shortcut("Key.cmd", show_overlay)
 start_listener(send_overlay_keyevent)
 
@@ -92,11 +92,8 @@ class Logger:
         if os.path.exists(outfile + ".0.log"):
             os.system("mv " + outfile + ".0.log " + outfile + ".1.log")
 
-        now = datetime.now()
-        time = now.strftime("%H:%M:%S")
-
         self.file = open(outfile + ".0.log", "a")
-        self.write("Abyss Launcher Log (" + time + ")")
+        self.write("Abyss Launcher Log (" + datetime.now().strftime("%H:%M:%S") + ")")
         self.write("\t[-] Info")
         self.write("\t[*] Note")
         self.write("\t[!] Warning")
@@ -247,13 +244,13 @@ def launch(appname, run):
 def restart():
     logger.note("Restarting")
     close()
-    os.system("reboot")
+    system("reboot")
 
 
 def shutdown():
     logger.note("Shutting down")
     close()
-    os.system("shutdown now")
+    system("shutdown now")
 
 
 class WebApp(QWebEngineView):
@@ -272,6 +269,12 @@ class WebApp(QWebEngineView):
         self.channel = QWebChannel()
         self.channel.registerObject('backend', self)
         self.page().setWebChannel(self.channel)
+
+    @pyqtSlot()
+    def onLoad(self):
+        global xid
+        xid = system("xprop -root _NET_ACTIVE_WINDOW | cut -d\\# -f2")[0]
+        logger.log("XID is " + xid)
 
     @pyqtSlot(str, int)
     def log(self, msg, weight=0):
@@ -298,8 +301,12 @@ class WebApp(QWebEngineView):
 
     @pyqtSlot(result=bool)
     def in_app(self):
-        global in_app
+        global in_app, force_out_app
         in_app = app_process.poll() is None
+        if (not in_app) and (force_out_app.value == 1):
+            app_process.terminate()
+            force_out_app.value = 0
+            in_app = False
         return in_app
 
     @pyqtSlot(result=bool)
@@ -338,12 +345,6 @@ class WebApp(QWebEngineView):
     def getDesktopIconPath(self, name):
         return getDesktopEntryAttribute(name, "Icon")
 
-    @pyqtSlot()
-    def pollRequests(self):
-        if app_stop.value == 1:
-            app_stop.value = 0
-            stop_current_app()
-
     @pyqtSlot(str, result=str)
     def getFile(self, path):
         fullpath = "src/" + path
@@ -366,15 +367,13 @@ if __name__ == "__main__":
     view = WebApp()
 
     logger.log("Getting screen size")
-    cmd = "xdpyinfo  | grep -oP 'dimensions:\\s+\\K\\S+'"
-    logger.log("> " + cmd)
-    size = os.popen(cmd).readlines()[0]
+    size = system("xdpyinfo  | grep -oP 'dimensions:\\s+\\K\\S+'")[0]
     logger.note("Size: " + size.strip("\n"))
     width = int(size.split("x")[0])
     height = int(size.split("x")[1])
 
     logger.log("Initializing in-app overlay")
-    start_overlay(width, height, shutdown, restart, queue_app_stop)
+    start_overlay(width, height, shutdown, restart, kill_app)
 
     logger.log("Starting launcher")
     view.setGeometry(0, 0, width, height)
