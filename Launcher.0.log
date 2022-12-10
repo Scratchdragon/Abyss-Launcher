@@ -1,4 +1,4 @@
-Abyss Launcher Log (19:57:42)
+Abyss Launcher Log (20:14:53)
 	[-] Info
 	[*] Note
 	[!] Warning
@@ -310,16 +310,7 @@ Abyss Launcher Log (19:57:42)
 [*] File request succeeded
 [-] getFile request for 'src/data/widgets/panel/wifi.json'
 [*] File request succeeded
-[-] > placeholder
-[-] Starting application 'Placeholder'
-[E] [Errno 2] No such file or directory: 'placeholder'
-[-] Opening app 'Quake' from desktop file
-	Exec: quakespasm
-[-] > quakespasm
-[-] Starting application 'Quake'
-[-] > steam steam://rungameid/1625450
-[-] Starting application 'Muck'
 [E] name 'asset_thread' is not defined
 [-] Closing listener
 [-] Closing overlay
-Log closed at (19:58:32)
+Log closed at (20:15:29)

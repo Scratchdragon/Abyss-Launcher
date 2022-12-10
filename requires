@@ -1,2 +1,4 @@
 pynput
 overlay
+pillow
+tkinter/tk
