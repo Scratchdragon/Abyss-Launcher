@@ -98,6 +98,7 @@ visible = False
 
 
 def show():
+    win.root.lift()
     global w, visible
     visible = True
     w = height / 9
@@ -115,8 +116,8 @@ def hide():
 
 
 def animate():
-    win.size = ((w + (win.size[0] * 10)) / 11, height)
-    win.alpha = (alpha + (win.alpha * 10)) / 11
+    win.size = ((w + (win.size[0] * 4)) / 3, height)
+    win.alpha = (alpha + (win.alpha * 4)) / 3
 
 
 def update():
