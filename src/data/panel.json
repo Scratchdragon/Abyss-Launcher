@@ -1,4 +1,7 @@
 [
+	"data/widgets/panel/restart.json",
+	"data/widgets/panel/shutdown.json",
 	"data/widgets/panel/time.json",
 	"data/widgets/panel/wifi.json"
+
 ]

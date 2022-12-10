@@ -1,4 +1,5 @@
 import os
+import subprocess
 import sys
 import threading
 import glob
@@ -6,9 +7,62 @@ import glob
 from PyQt5.QtCore import pyqtSlot, QUrl
 from PyQt5.QtWebChannel import QWebChannel
 from PyQt5.QtWebEngineWidgets import QWebEngineView
-from PyQt5.QtWidgets import QApplication
+from PyQt5.QtWidgets import QApplication, QMessageBox
 
 from datetime import datetime
+
+from py.shortcuts import *
+from py.app_overlay import *
+
+
+def debug():
+    print("debug")
+
+
+app_process = subprocess.Popen("uname -a".split(" "))
+app_stop = Value("i", 0)
+
+
+def queue_app_stop():
+    app_stop.value = 1
+
+
+def stop_current_app():
+    kill_app(app_process)
+
+
+def kill_app(process):
+    logger.log("Killing app process " + str(process.pid))
+    process.kill()
+
+
+def show_overlay():
+    manual_show.value = 1
+
+
+def send_overlay_keyevent(key):
+    events = {
+        "w": 1,
+        "Key.up": 1,
+        "s": 2,
+        "Key.down": 2,
+        "a": 3,
+        "Key.left": 3,
+        "d": 4,
+        "Key.right": 4,
+        "Key.enter": 5,
+        "Key.space": 5
+    }
+    if key in events:
+        event.value = events[key]
+
+
+# Register all keyboard shortcuts
+register_shortcut("Key.f4", stop_current_app)
+register_shortcut("Key.cmd", show_overlay)
+start_listener(send_overlay_keyevent)
+
+ignore_icons = True
 
 
 class Logger:
@@ -99,7 +153,7 @@ def get_desktop_entries():
 
 desktop_entries = get_desktop_entries()
 
-icons_ready = False
+icons_ready = ignore_icons
 
 
 def full_icon_path(icon):
@@ -130,8 +184,21 @@ def loadIcons():
     icons_ready = True
 
 
-asset_thread = threading.Thread(name="Asset loader", target=loadIcons)
-asset_thread.start()
+if not ignore_icons:
+    asset_thread = threading.Thread(name="Asset loader", target=loadIcons)
+    asset_thread.start()
+
+
+def close():
+    try:
+        asset_thread.join()
+    except Exception as e:
+        logger.error(str(e))
+    logger.log("Closing listener")
+    stop_listener()
+    logger.log("Closing overlay")
+    stop_overlay()
+    logger.close()
 
 
 def desktop_entries_by_category(category):
@@ -159,18 +226,34 @@ def getDesktopEntryAttribute(name, key):
     return None
 
 
-def launch(appname, launch):
+def launch(appname, run):
+    global in_app
+    in_app = True
+
+    logger.log("> " + run)
+    global app_process
     logger.log("Starting application '" + appname + "'")
-    logger.log("> " + launch)
+    try:
+        app_process = subprocess.Popen(run.split(" "))
+    except Exception as e:
+        logger.error(str(e))
+        msg = QMessageBox()
+        msg.setIcon(QMessageBox.Critical)
+        msg.setWindowTitle("Command Error")
+        msg.setText("Error running application '" + appname + "':\n" + str(e))
+        msg.exec_()
 
-    def run():
-        global in_app
-        in_app = True
-        os.system(launch)
-        in_app = False
 
-    thread = threading.Thread(name="App start", target=run)
-    thread.start()
+def restart():
+    logger.note("Restarting")
+    close()
+    os.system("reboot")
+
+
+def shutdown():
+    logger.note("Shutting down")
+    close()
+    os.system("shutdown now")
 
 
 class WebApp(QWebEngineView):
@@ -207,18 +290,16 @@ class WebApp(QWebEngineView):
 
     @pyqtSlot()
     def restart(self):
-        logger.note("Restarting")
-        logger.close()
-        os.system("reboot")
+        restart()
 
     @pyqtSlot()
     def shutdown(self):
-        logger.note("Shutting down")
-        logger.close()
-        os.system("shutdown now")
+        shutdown()
 
     @pyqtSlot(result=bool)
     def in_app(self):
+        global in_app
+        in_app = app_process.poll() is None
         return in_app
 
     @pyqtSlot(result=bool)
@@ -257,6 +338,12 @@ class WebApp(QWebEngineView):
     def getDesktopIconPath(self, name):
         return getDesktopEntryAttribute(name, "Icon")
 
+    @pyqtSlot()
+    def pollRequests(self):
+        if app_stop.value == 1:
+            app_stop.value = 0
+            stop_current_app()
+
     @pyqtSlot(str, result=str)
     def getFile(self, path):
         fullpath = "src/" + path
@@ -286,9 +373,11 @@ if __name__ == "__main__":
     width = int(size.split("x")[0])
     height = int(size.split("x")[1])
 
+    logger.log("Initializing in-app overlay")
+    start_overlay(width, height, shutdown, restart, queue_app_stop)
+
     logger.log("Starting launcher")
     view.setGeometry(0, 0, width, height)
     view.show()
     app.exec_()
-    logger.close()
-    asset_thread.join()
+    close()

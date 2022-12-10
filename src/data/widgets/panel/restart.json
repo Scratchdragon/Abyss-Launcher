@@ -1,0 +1,5 @@
+{
+	"name":"restart_button",
+	"content":"<img class='act_icon'>",
+	"script":"restart.js"
+}

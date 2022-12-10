@@ -1,5 +1,6 @@
 // Start interface with python
 var backend;
+
 new QWebChannel(qt.webChannelTransport, function (channel) {
     backend = channel.objects.backend;
     function await_app_exit() {
@@ -7,6 +8,7 @@ new QWebChannel(qt.webChannelTransport, function (channel) {
 		    if(icons_ready) {
                 document.body.style.top = "0";
                 loadElements();
+                poll_loop();
             }
 	        else {
 	            const timeout = setTimeout(function() {
@@ -17,6 +19,14 @@ new QWebChannel(qt.webChannelTransport, function (channel) {
     }
     await_app_exit();
 });
+
+function poll_loop() {
+    backend.pollRequests();
+    const timeout = setTimeout(function() {
+        poll_loop();
+    }, 1000);
+}
+
 
 // Functions for fake popups:
 function open_popup(obj) {

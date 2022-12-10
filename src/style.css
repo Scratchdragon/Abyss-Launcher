@@ -33,13 +33,21 @@ body {
 
 #top-panel .widget {
     float: right;
-
+    height: 3vh;
 	color: rgb(220, 220, 220);
 	line-height: 1;
 	font-size: 3vh;
 	margin: 0;
 	border: 1vh solid transparent;
 	transition: all 0.2s;
+}
+
+#top-panel .widget img {
+    opacity: 0.8;
+}
+
+#top-panel .widget:hover img {
+    opacity: 1;
 }
 
 #top-panel .widget:hover {
