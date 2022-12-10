@@ -128,7 +128,6 @@ def update():
     global visible
     if manual_show.value == 1:
         manual_show.value = 0
-        print(visible)
         visible = not visible
         if visible:
             show()
