@@ -15,7 +15,7 @@ from py.logger import Logger
 
 # Debug flags
 debug_flags = {
-    "load_icons": False
+    "load_icons": True
 }
 
 # Log/system methods and variables
@@ -80,9 +80,9 @@ class AppManager:
     @staticmethod
     def kill_app():
         logger.log("Killing active app process")
-        kill_id = system("xprop -root _NET_ACTIVE_WINDOW | cut -d\\# -f2")[0]
+        kill_id = system("xdotool getwindowfocus")[0]
         if not kill_id == xid:
-            system("xkill -id " + kill_id)
+            system("xdotool getwindowfocus windowkill")
         else:
             logger.log("Kill id equals launcher id, cannot kill")
             AppManager.force_out_app.value = 1
@@ -231,7 +231,7 @@ class WebApp(QWebEngineView):
     @pyqtSlot()
     def onLoad(self):  # Method is run once the web page connects to the QWebChannel
         global xid  # Safe to assume that the launcher is the focussed task at this point
-        xid = system("xprop -root _NET_ACTIVE_WINDOW | cut -d\\# -f2")[0]  # Gets the id of the active window (should be the launcher)
+        xid = system("xdotool getwindowfocus")[0]  # Gets the id of the active window (should be the launcher)
         logger.log("XID is " + xid)
 
     @pyqtSlot(str, int)

@@ -1,4 +1,4 @@
-Abyss Launcher Log (16:15:59)
+Abyss Launcher Log (17:06:48)
 	[-] Info
 	[*] Note
 	[!] Warning
@@ -299,8 +299,8 @@ Abyss Launcher Log (16:15:59)
 [*] File request succeeded
 [-] getFile request for 'src/./data/appdata.json'
 [*] File request succeeded
-[-] > xprop -root _NET_ACTIVE_WINDOW | cut -d\# -f2
-[-] XID is  0x4e0002b
+[-] > xdotool getwindowfocus
+[-] XID is 81788971
 
 [-] getFile request for 'src/data/widgets/panel/restart.json'
 [*] File request succeeded
@@ -314,9 +314,18 @@ Abyss Launcher Log (16:15:59)
 [*] File request succeeded
 [-] getFile request for 'src/data/widgets/panel/wifi.json'
 [*] File request succeeded
-[-] > flatpak run com.github.Anuken.Mindustry
-[-] Starting application 'Mindustry'
+[-] > ['sudo', '-H', '-u', 'declan', 'bash', '-c', 'quakespasm -basedir /usr/local/games']
+[-] Starting application 'Quake'
+[-] Killing active app process
+[-] > xdotool getwindowfocus
+[-] > xdotool getwindowfocus windowkill
+[-] Killing active app process
+[-] > xdotool getwindowfocus
+[-] Kill id equals launcher id, cannot kill
+[-] Killing active app process
+[-] > xdotool getwindowfocus
+[-] Kill id equals launcher id, cannot kill
 [E] name 'asset_thread' is not defined
 [-] Closing listener
 [-] Closing overlay
-Log closed at (16:16:46)
+Log closed at (17:07:16)
