@@ -1,8 +1,9 @@
-Abyss Launcher Log (12:45:39)
+Abyss Launcher Log (16:13:48)
 	[-] Info
 	[*] Note
 	[!] Warning
 	[E] Error
+[-] Running under user 'declan'
 [*] Loading desktop entries
 	Indexing directory '/usr/share/applications'
 		Loaded 'avahi-discover.desktop' (Avahi Zeroconf Browser)
@@ -299,7 +300,7 @@ Abyss Launcher Log (12:45:39)
 [-] getFile request for 'src/./data/appdata.json'
 [*] File request succeeded
 [-] > xprop -root _NET_ACTIVE_WINDOW | cut -d\# -f2
-[-] XID is  0x7a0002b
+[-] XID is  0x4e0002b
 
 [-] getFile request for 'src/data/widgets/panel/restart.json'
 [*] File request succeeded
@@ -313,25 +314,9 @@ Abyss Launcher Log (12:45:39)
 [*] File request succeeded
 [-] getFile request for 'src/data/widgets/panel/wifi.json'
 [*] File request succeeded
-[-] > flatpak run com.shatteredpixel.shatteredpixeldungeon
-[-] Starting application 'Pixel Dungeon'
-[-] in_app? : 
-[-] poll() == None
-[-] pid == 31746
-[-] returncode == None
-[-] in_app? : 
-[-] poll() == None
-[-] pid == 31746
-[-] returncode == None
-[-] in_app? : 
-[-] poll() == None
-[-] pid == 31746
-[-] returncode == None
-[-] in_app? : 
-[-] poll() == None
-[-] pid == 31746
-[-] returncode == None
-[-] in_app? : 
-[-] poll() == None
-[-] pid == 31746
-[-] returncode == None
+[-] > sudo -H -u declan bash -c 'flatpak run com.github.Anuken.Mindustry'
+[-] Starting application 'Mindustry'
+[E] name 'asset_thread' is not defined
+[-] Closing listener
+[-] Closing overlay
+Log closed at (16:15:55)

@@ -8,6 +8,28 @@ from overlay import Window
 
 win = Window(draggable=False, alpha=0)
 
+
+def show_overlay():
+    manual_show.value = 1
+
+
+def handle_overlay_input(key):
+    events = {
+        "w": 1,
+        "Key.up": 1,
+        "s": 2,
+        "Key.down": 2,
+        "a": 3,
+        "Key.left": 3,
+        "d": 4,
+        "Key.right": 4,
+        "Key.enter": 5,
+        "Key.space": 5
+    }
+    if key in events:
+        event.value = events[key]
+
+
 should_join = Value("i", 0)
 manual_show = Value("i", 0)
 event = Value("i", 0)
